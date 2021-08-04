@@ -10,6 +10,8 @@ models:
             - date_month
       - dbt_utils.expression_is_true:
           expression: "date_month <= date_trunc('month', current_date)"
+          
+    +materialized: table
 
     columns:
       - name: id

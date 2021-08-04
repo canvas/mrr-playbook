@@ -1,3 +1,5 @@
+{{ config(materialized='table') }}
+
 with unioned as (
 
     select * from {{ ref('customer_revenue_by_month') }}
