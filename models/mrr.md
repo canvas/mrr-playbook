@@ -1,9 +1,7 @@
 {% docs mrr %}
-This model represents one record per month, per account (months have been filled
-in to include any periods of inactivity).
+This model represents one record per month.
 
-This model classifies each month as one of: `new`, `reactivation`, `upgrade`,
-`downgrade`, or `churn`.
+This model classifies each month as one of: `new`,`downgrade`, or `churn`.
 
 {% enddocs %}
 

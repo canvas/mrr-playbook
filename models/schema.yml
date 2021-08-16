@@ -2,6 +2,7 @@ version: 2
 
 models:
   - name: subscription_periods
+    description: 'Duration of active subscriptions.'
     tests:
       # test that a customer can only have one active subscription at a time
       - dbt_utils.mutually_exclusive_ranges:
@@ -17,7 +18,7 @@ models:
 
 
   - name: customer_revenue_by_month
-    description: 'this is a descriptiong'
+    description: 'Global revenue data aggregated by month.'
     tests:
       - dbt_utils.unique_combination_of_columns:
           combination_of_columns:
@@ -25,6 +26,7 @@ models:
             - date_month
 
   - name: customer_churn_month
+    description: 'Global churn data aggregated by month. Does not include churn associated with trials.'
     columns:
       - name: customer_id
         tests:
